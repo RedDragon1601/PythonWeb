@@ -1,0 +1,55 @@
+#menu ul {
+    background: black;
+    text-align: center;
+}
+
+#menu li {
+    background: black;
+    display: inline-block;
+    width: 160px;
+    height: 40px;
+    line-height: 40px;
+    margin-left: -5px;
+}
+
+#menu a {
+    color: red;
+    text-decoration: none;
+    display: block;
+}
+
+#menu a:hover {
+    background: white;
+}
+
+#heading {
+    text-align: center;
+}
+
+#ListView {
+    background: black;
+    width: 160px;
+    height: auto;
+}
+
+#ListView a {
+    text-decoration: none;
+    color: red;
+    text-align: center;
+}
+
+#Label {
+    text-align: center;
+}
+
+#Registration {
+    background: black;
+    width: 160px;
+    height: auto;
+    color: red;
+}
+
+#Registration a {
+    text-decoration: none;
+    color: red;
+}

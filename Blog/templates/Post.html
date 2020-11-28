@@ -1,0 +1,11 @@
+{% extends 'Base.html' %}
+
+{% block title %}{{ post.title }}{% endblock %}
+
+{% block content %}
+    <div id="Label">
+        <h1>{{ post.title }}</h1>
+        <h3>{{ post.body|safe|linebreaks }}</h3>
+        <img src="{{ post.image.url }}" width="270px" height="auto">
+    </div>
+{% endblock %}

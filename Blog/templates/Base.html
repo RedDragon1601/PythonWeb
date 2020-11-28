@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'Style.css' %}">
+</head>
+<body>
+    <nav id="menu">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="{% url 'PostListView' %}">Post</a></li>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Liên Hệ</a></li>
+            <li><a href="#">Admin Team</a></li>
+        </ul>
+    </nav>
+    <div id="Registration">
+        {% if user.username %}
+            <h1>{{ user.username }}</h1>
+            <br>
+            <h3><a href="{% url 'Logout' %}">Logout</a></h3>
+        {% else %}
+            <a href="{% url 'Register' %}">Register</a>
+            <br>
+            <a href="{% url 'Login' %}">Login</a>
+        {% endif %}
+    </div>
+    {% block content %}
+    
+    {% endblock %}
+</body>
+</html>
